@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ajustes globales recomendados */
+body {
+  @apply bg-gray-100 text-white overflow-x-hidden;
+  margin: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Ajustes globales para la impresión*/
+@media print {
+  input,
+  select,
+  textarea {
+    color: #000 !important;
+    -webkit-text-fill-color: #504e4e !important;
+    background-color: transparent !important;
+    print-color-adjust: exact !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #888 !important; /* Más oscuro que gris claro */
+  }
+}
